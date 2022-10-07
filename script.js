@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
   let sec = secs[r];
   let c = parseInt(Math.random() * 10) % clr.length
   console.log(r, c);
-  document.querySelector("#" + sec).style.backgroundColor = clr[c];
+  document.querySelector("." + sec).style.backgroundColor = clr[c];
   for (let i = 0; i < stepSec.length; i++){
     stepSec[i].style.color = clr[c];
   }
@@ -34,7 +34,7 @@ searchButton.addEventListener('click', () => {
   let value = searchInput.value;
   value = value.toLowerCase().trim();
   if (secs.includes(value)) {
-    const section = document.querySelector("#" + value).offsetTop;
+    const section = document.querySelector("." + value).offsetTop;
     console.log(section);
     window.scrollTo({ top:section })
     
