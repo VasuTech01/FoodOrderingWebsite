@@ -9,14 +9,13 @@ let secs = [ "order", "popular", "gallery", "review", "speciality","home"];
 
 
 document.addEventListener("DOMContentLoaded", () => {
-  let clr = ["orange", "#2a2a9a", "#3a2833", "#1a7506"];
+  let clr = ["orange", "#2a2a9a", "#3a3833", "#1f5306"];
   let r = parseInt(Math.random() * 10) % secs.length;
 
   let sec = secs[r];
   let c = parseInt(Math.random() * 10) % clr.length
   console.log(r, c);
-  document.querySelector("#" + sec).style.color = clr[c];
-
+  document.querySelector("#" + sec).style.backgroundColor = clr[c];
   for (let i = 0; i < stepSec.length; i++){
     stepSec[i].style.color = clr[c];
   }
